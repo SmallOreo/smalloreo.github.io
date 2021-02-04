@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://smalloreo.xyz</id>
+    <id>https://smalloreo.github.io</id>
     <title>奥利奥</title>
-    <updated>2021-02-04T09:09:50.212Z</updated>
+    <updated>2021-02-04T09:11:01.530Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://smalloreo.xyz"/>
-    <link rel="self" href="https://smalloreo.xyz/atom.xml"/>
+    <link rel="alternate" href="https://smalloreo.github.io"/>
+    <link rel="self" href="https://smalloreo.github.io/atom.xml"/>
     <subtitle>博学而笃志，厚积而薄发</subtitle>
-    <logo>https://smalloreo.xyz/images/avatar.png</logo>
-    <icon>https://smalloreo.xyz/favicon.ico</icon>
+    <logo>https://smalloreo.github.io/images/avatar.png</logo>
+    <icon>https://smalloreo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 奥利奥</rights>
     <entry>
         <title type="html"><![CDATA[你好世界]]></title>
-        <id>https://smalloreo.xyz/post/ni-hao-shi-jie/</id>
-        <link href="https://smalloreo.xyz/post/ni-hao-shi-jie/">
+        <id>https://smalloreo.github.io/post/ni-hao-shi-jie/</id>
+        <link href="https://smalloreo.github.io/post/ni-hao-shi-jie/">
         </link>
         <updated>2021-02-04T06:55:38.000Z</updated>
         <content type="html"><![CDATA[<p>我的第一篇文章！！！！😃</p>
