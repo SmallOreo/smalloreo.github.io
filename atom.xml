@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smalloreo.github.io</id>
     <title>奥利奥</title>
-    <updated>2021-02-04T09:11:01.530Z</updated>
+    <updated>2021-02-07T06:40:23.673Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smalloreo.github.io"/>
     <link rel="self" href="https://smalloreo.github.io/atom.xml"/>
@@ -11,12 +11,61 @@
     <icon>https://smalloreo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 奥利奥</rights>
     <entry>
-        <title type="html"><![CDATA[你好世界]]></title>
-        <id>https://smalloreo.github.io/post/ni-hao-shi-jie/</id>
-        <link href="https://smalloreo.github.io/post/ni-hao-shi-jie/">
+        <title type="html"><![CDATA[对一个程序（面试题）的个人理解【C#】]]></title>
+        <id>https://smalloreo.github.io/post/dui-yi-ge-cheng-xu-mian-shi-ti-de-ge-ren-li-jie/</id>
+        <link href="https://smalloreo.github.io/post/dui-yi-ge-cheng-xu-mian-shi-ti-de-ge-ren-li-jie/">
         </link>
-        <updated>2021-02-04T06:55:38.000Z</updated>
-        <content type="html"><![CDATA[<p>我的第一篇文章！！！！😃</p>
+        <updated>2021-02-06T03:03:03.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="面试题目">面试题目<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h2>
+<p>**经典面试题：有一组数1、1、2、3、5、8、13、21、34....，要求算出这组数的第30个数是多少？  **</p>
+<h2 id="题目分析">题目分析</h2>
+<p>先找规律：<br>
+<strong>第三个数字是前两个数字之和</strong></p>
+<p><em>以题目中的数字为例:</em><br>
+第三位数<strong>2</strong>=它前两个数字<strong>1</strong>与<strong>1</strong>之和<br>
+第四位数<strong>3</strong>=它前面两个数字<strong>1</strong>与<strong>2</strong>之和<br>
+....</p>
+<h2 id="程序代码">程序代码</h2>
+<pre><code>//代码来源于《零基础学C#》😃
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1 = 1, num2 = 1, temp;//定义3个变量，num1用来记录
+            for (int i = 2; i &lt; 30; i++)
+            {
+                num1 += num2;//后一个数字是前两个数字之和
+                //交换num1和num2的值
+                temp = num1;
+                num1 = num2;
+                num2 = temp;
+            }
+            Console.WriteLine(&quot;第 30 个数为：&quot; + num2);//输出指定位数上的数据
+            Console.ReadLine();
+        }
+    }
+}
+</code></pre>
+<h2 id="代码分析">代码分析</h2>
+<p>最开始的时候我有个疑问点：<strong>为什么在for循环中的i要定义成2？</strong></p>
+<p>之后认为（回答解决）：因为第一个数字（1）前面应该还有一个数字<strong>0</strong>，这样第二个数字1才能根据前面的1和0推理出来。<strong>所以综上所述，i应赋值为2</strong></p>
+<p>之后，代码创建一个Temp变量作为中专站交换num1和num2的数值</p>
+<p>最终用<code>Console.WriteLine();</code>函数输出<code>num2</code>的值。得出第30个数</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>该内容为个人理解，不确保理论准确性 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 ]]></content>
     </entry>
 </feed>
