@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>对一个程序（面试题）的个人理解【C#】 | 奥利奥</title>
+<meta name="description" content="博学而笃志，厚积而薄发">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://smalloreo.github.io/favicon.ico?v=1612684363466">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://smalloreo.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://smalloreo.github.io">
+        <img class="avatar" src="https://smalloreo.github.io/images/avatar.png?v=1612684363466" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://smalloreo.github.io">
+        <h1 class="site-title">奥利奥</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">对一个程序（面试题）的个人理解【C#】</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-02-06</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://smalloreo.github.io/CcbwDHSd0/">
+                    编程
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h2 id="面试题目">面试题目<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h2>
+<p>**经典面试题：有一组数1、1、2、3、5、8、13、21、34....，要求算出这组数的第30个数是多少？  **</p>
+<h2 id="题目分析">题目分析</h2>
+<p>先找规律：<br>
+<strong>第三个数字是前两个数字之和</strong></p>
+<p><em>以题目中的数字为例:</em><br>
+第三位数<strong>2</strong>=它前两个数字<strong>1</strong>与<strong>1</strong>之和<br>
+第四位数<strong>3</strong>=它前面两个数字<strong>1</strong>与<strong>2</strong>之和<br>
+....</p>
+<h2 id="程序代码">程序代码</h2>
+<pre><code>//代码来源于《零基础学C#》😃
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1 = 1, num2 = 1, temp;//定义3个变量，num1用来记录
+            for (int i = 2; i &lt; 30; i++)
+            {
+                num1 += num2;//后一个数字是前两个数字之和
+                //交换num1和num2的值
+                temp = num1;
+                num1 = num2;
+                num2 = temp;
+            }
+            Console.WriteLine(&quot;第 30 个数为：&quot; + num2);//输出指定位数上的数据
+            Console.ReadLine();
+        }
+    }
+}
+</code></pre>
+<h2 id="代码分析">代码分析</h2>
+<p>最开始的时候我有个疑问点：<strong>为什么在for循环中的i要定义成2？</strong></p>
+<p>之后认为（回答解决）：因为第一个数字（1）前面应该还有一个数字<strong>0</strong>，这样第二个数字1才能根据前面的1和0推理出来。<strong>所以综上所述，i应赋值为2</strong></p>
+<p>之后，代码创建一个Temp变量作为中专站交换num1和num2的数值</p>
+<p>最终用<code>Console.WriteLine();</code>函数输出<code>num2</code>的值。得出第30个数</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>该内容为个人理解，不确保理论准确性 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+          </div>
+        </div>
+
+        
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">博学而笃志，厚积而薄发</div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/SmallOreo" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  小简奥利奥好吃吗？ | <a class="rss" href="https://smalloreo.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '5f5eeddcb9f3a146ff9c',
+        clientSecret: '6d146b5d9a08e8f74cfad7c573b1e2060a5d7d18',
+        repo: 'smalloreo.github.io',
+        owner: 'smalloreo',
+        admin: ['smalloreo'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
