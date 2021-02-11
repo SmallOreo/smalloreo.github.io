@@ -1,108 +1,104 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>对一个程序（面试题）的个人理解【C#】 | 奥利奥</title>
-<meta name="description" content="博学而笃志，厚积而薄发">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://smalloreo.github.io/favicon.ico?v=1612684363466">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://smalloreo.github.io/favicon.ico?v=1613032166824">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://smalloreo.github.io/styles/main.css">
-
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="alternate" type="application/atom+xml" title="对一个程序（面试题）的个人理解【C#】 | 奥利奥 - Atom Feed" href="https://smalloreo.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
+    <meta name="description" content="面试题目[1]
+**经典面试题：有一组数1、1、2、3、5、8、13、21、34....，要求算出这组数的第30个数是多少？  **
+题目分析
+先找规律：
+第三个数字是前两个数字之和
+以题目中的数字为例:
+第三位数2=它前两个数字1与1之和..." />
+    <meta name="keywords" content="编程" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://smalloreo.github.io">
-        <img class="avatar" src="https://smalloreo.github.io/images/avatar.png?v=1612684363466" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://smalloreo.github.io">
-        <h1 class="site-title">奥利奥</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://smalloreo.github.io">
+  <img class="avatar" src="https://smalloreo.github.io/images/avatar.png?v=1613032166824" alt="">
+  </a>
+  <h1 class="site-title">
+    奥利奥
+  </h1>
+  <p class="site-description">
+    博学而笃志，厚积而薄发
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
         <div class="post-detail">
-          
-          <h2 class="post-title">对一个程序（面试题）的个人理解【C#】</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2021-02-06</span>
-            
+          <article class="post">
+            <h2 class="post-title">
+              对一个程序（面试题）的个人理解【C#】
+            </h2>
+            <div class="post-info">
               <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://smalloreo.github.io/CcbwDHSd0/">
-                    编程
-                    
-                  </a>
-                
+                2021-02-06
               </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://smalloreo.github.io/CcbwDHSd0/" class="post-tag">
+                  # 编程
+                </a>
+              
+            </div>
             
-          </div>
-          <div class="post-content">
-            <h2 id="面试题目">面试题目<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h2>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="面试题目">面试题目<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h2>
 <p>**经典面试题：有一组数1、1、2、3、5、8、13、21、34....，要求算出这组数的第30个数是多少？  **</p>
 <h2 id="题目分析">题目分析</h2>
 <p>先找规律：<br>
@@ -153,82 +149,103 @@ namespace Demo
 </ol>
 </section>
 
-          </div>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE">面试题目[^1]</a></li>
+<li><a href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90">题目分析</a></li>
+<li><a href="#%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81">程序代码</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90">代码分析</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
         </div>
 
         
-      </div>
-
-      
-        
-          <div id="gitalk-container"></div>
-        
 
         
-      
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-      <div class="site-footer">
-  <div class="slogan">博学而笃志，厚积而薄发</div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/SmallOreo" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  小简奥利奥好吃吗？ | <a class="rss" href="https://smalloreo.github.io/atom.xml" target="_blank">RSS</a>
-</div>
+<div id="gitalk-container"></div>
 
+<script>
 
-    </div>
-    <script type="application/javascript">
+  var gitalk = new Gitalk({
+    clientID: '5f5eeddcb9f3a146ff9c',
+    clientSecret: '6d146b5d9a08e8f74cfad7c573b1e2060a5d7d18',
+    repo: 'smalloreo.github.io',
+    owner: 'smalloreo',
+    admin: ['smalloreo'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
 
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  gitalk.render('gitalk-container')
 
 </script>
 
+          
 
+          
+        
 
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <div class="site-footer">
+  小简奥利奥好吃吗？
+  <a class="rss" href="https://smalloreo.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
     <script>
+      hljs.initHighlightingOnLoad()
 
-      var gitalk = new Gitalk({
-        clientID: '5f5eeddcb9f3a146ff9c',
-        clientSecret: '6d146b5d9a08e8f74cfad7c573b1e2060a5d7d18',
-        repo: 'smalloreo.github.io',
-        owner: 'smalloreo',
-        admin: ['smalloreo'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-      gitalk.render('gitalk-container')
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
     </script>
-  
-
-  
-
-
-
-
   </body>
 </html>
