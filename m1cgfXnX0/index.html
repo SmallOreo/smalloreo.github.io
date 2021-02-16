@@ -2,23 +2,24 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>对一个程序（面试题）的个人理解【C#】 | 奥利奥</title>
+<title>AR项目跟做 Le.9：完成UI设计 | 奥利奥</title>
 <link rel="shortcut icon" href="https://smalloreo.github.io/favicon.ico?v=1613468121199">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://smalloreo.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="对一个程序（面试题）的个人理解【C#】 | 奥利奥 - Atom Feed" href="https://smalloreo.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="AR项目跟做 Le.9：完成UI设计 | 奥利奥 - Atom Feed" href="https://smalloreo.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="面试题目[1]
-**经典面试题：有一组数1、1、2、3、5、8、13、21、34....，要求算出这组数的第30个数是多少？  **
-题目分析
-先找规律：
-第三个数字是前两个数字之和
-以题目中的数字为例:
-第三位数2=它前两个数字1与1之和..." />
-    <meta name="keywords" content="编程" />
+    <meta name="description" content="本课概括
+
+今天我学习完了第九节课程，主要讲述了UnityGUI的一些搭建设计。
+问题/难点
+在课程学习当中，我遇到了以下一些棘手的问题：
+
+物体锚点的小蓝点凭空消失
+ScrollReft/Parent/Targetltem导入至新建的Pa..." />
+    <meta name="keywords" content="AR项目跟做,编程" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -80,15 +81,19 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              对一个程序（面试题）的个人理解【C#】
+              AR项目跟做 Le.9：完成UI设计
             </h2>
             <div class="post-info">
               <span>
-                2021-02-06
+                2021-02-16
               </span>
               <span>
                 2 min read
               </span>
+              
+                <a href="https://smalloreo.github.io/_cS1WiiJe/" class="post-tag">
+                  # AR项目跟做
+                </a>
               
                 <a href="https://smalloreo.github.io/CcbwDHSd0/" class="post-tag">
                   # 编程
@@ -96,68 +101,50 @@
               
             </div>
             
+              <img class="post-feature-image" src="https://smalloreo.github.io/post-images/m1cgfXnX0.png" alt="">
+            
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="面试题目">面试题目<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h2>
-<p>**经典面试题：有一组数1、1、2、3、5、8、13、21、34....，要求算出这组数的第30个数是多少？  **</p>
-<h2 id="题目分析">题目分析</h2>
-<p>先找规律：<br>
-<strong>第三个数字是前两个数字之和</strong></p>
-<p><em>以题目中的数字为例:</em><br>
-第三位数<strong>2</strong>=它前两个数字<strong>1</strong>与<strong>1</strong>之和<br>
-第四位数<strong>3</strong>=它前面两个数字<strong>1</strong>与<strong>2</strong>之和<br>
-....</p>
-<h2 id="程序代码">程序代码</h2>
-<pre><code>//代码来源于《零基础学C#》😃
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Demo
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int num1 = 1, num2 = 1, temp;//定义3个变量，num1用来记录
-            for (int i = 2; i &lt; 30; i++)
-            {
-                num1 += num2;//后一个数字是前两个数字之和
-                //交换num1和num2的值
-                temp = num1;
-                num1 = num2;
-                num2 = temp;
-            }
-            Console.WriteLine(&quot;第 30 个数为：&quot; + num2);//输出指定位数上的数据
-            Console.ReadLine();
-        }
-    }
-}
-</code></pre>
-<h2 id="代码分析">代码分析</h2>
-<p>最开始的时候我有个疑问点：<strong>为什么在for循环中的i要定义成2？</strong></p>
-<p>之后认为（回答解决）：因为第一个数字（1）前面应该还有一个数字<strong>0</strong>，这样第二个数字1才能根据前面的1和0推理出来。<strong>所以综上所述，i应赋值为2</strong></p>
-<p>之后，代码创建一个Temp变量作为中专站交换num1和num2的数值</p>
-<p>最终用<code>Console.WriteLine();</code>函数输出<code>num2</code>的值。得出第30个数</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>该内容为个人理解，不确保理论准确性 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
+                <h2 id="本课概括">本课概括</h2>
+<p><img src="https://smalloreo.github.io/post-images/1613467101852.png" alt="" loading="lazy"><br>
+今天我学习完了第九节课程，主要讲述了UnityGUI的一些搭建设计。</p>
+<h2 id="问题难点">问题/难点</h2>
+<p>在课程学习当中，我遇到了以下一些棘手的问题：</p>
+<ul>
+<li><strong>物体锚点的小蓝点凭空消失</strong></li>
+<li><strong>ScrollReft/Parent/Targetltem导入至新建的Parfats文件夹时由于事先导入错误，故删除修改无法重新导入</strong></li>
+</ul>
+<h2 id="问题解决方案">问题解决方案</h2>
+<h3 id="物体锚点的小蓝点凭空消失">物体锚点的小蓝点凭空消失</h3>
+<p>我咨询了一位大佬后，大佬耐心地指导了我。具体解决方法为：<strong>Scence面板中，按数字2键</strong>之后我又切回2D面板，蓝点出现。问题解决。🎯</p>
+<h3 id="无法重新导入解决方案">无法重新导入解决方案</h3>
+<p>我打算认怂，不敢把时间葬送在这个问题上。故采取了最笨最容易的方法：<strong>删了重做</strong>🎯</p>
+<h2 id="课程成品展示">课程成品展示</h2>
+<p><img src="https://smalloreo.github.io/post-images/1613467891703.png" alt="" loading="lazy"><br>
+<img src="https://smalloreo.github.io/post-images/1613467901324.png" alt="" loading="lazy"></p>
+<h2 id="需要修改bug之点">需要修改/BUG之点</h2>
+<ul>
+<li>英文命名待需检查，以免后期写脚本时出现错误或浪费时间</li>
+<li>不能自动排列图片一致间隔，需要手动调整（<strong>BUG</strong>）</li>
+<li>是否考虑图片框过小？</li>
+</ul>
+<p>本次的内容就到这里啦！希望等到1个月之后，我能跟着视频做出来一个像样的Unity作品！！！</p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE">面试题目[^1]</a></li>
-<li><a href="#%E9%A2%98%E7%9B%AE%E5%88%86%E6%9E%90">题目分析</a></li>
-<li><a href="#%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81">程序代码</a></li>
-<li><a href="#%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90">代码分析</a></li>
+<li><a href="#%E6%9C%AC%E8%AF%BE%E6%A6%82%E6%8B%AC">本课概括</a></li>
+<li><a href="#%E9%97%AE%E9%A2%98%E9%9A%BE%E7%82%B9">问题/难点</a></li>
+<li><a href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">问题解决方案</a>
+<ul>
+<li><a href="#%E7%89%A9%E4%BD%93%E9%94%9A%E7%82%B9%E7%9A%84%E5%B0%8F%E8%93%9D%E7%82%B9%E5%87%AD%E7%A9%BA%E6%B6%88%E5%A4%B1">物体锚点的小蓝点凭空消失</a></li>
+<li><a href="#%E6%97%A0%E6%B3%95%E9%87%8D%E6%96%B0%E5%AF%BC%E5%85%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">无法重新导入解决方案</a></li>
+</ul>
+</li>
+<li><a href="#%E8%AF%BE%E7%A8%8B%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA">课程成品展示</a></li>
+<li><a href="#%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9bug%E4%B9%8B%E7%82%B9">需要修改/BUG之点</a></li>
 </ul>
 </li>
 </ul>
@@ -167,6 +154,15 @@ namespace Demo
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://smalloreo.github.io/0PUj8oQnF/">
+              <h3 class="post-title">
+                计算机科学导论第一章习题答案
+              </h3>
+            </a>
+          </div>
         
 
         

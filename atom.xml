@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smalloreo.github.io</id>
     <title>奥利奥</title>
-    <updated>2021-02-14T13:42:45.201Z</updated>
+    <updated>2021-02-16T09:35:25.914Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smalloreo.github.io"/>
     <link rel="self" href="https://smalloreo.github.io/atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://smalloreo.github.io/images/avatar.png</logo>
     <icon>https://smalloreo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 奥利奥</rights>
+    <entry>
+        <title type="html"><![CDATA[AR项目跟做 Le.9：完成UI设计]]></title>
+        <id>https://smalloreo.github.io/m1cgfXnX0/</id>
+        <link href="https://smalloreo.github.io/m1cgfXnX0/">
+        </link>
+        <updated>2021-02-16T09:16:58.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="本课概括">本课概括</h2>
+<p><img src="https://smalloreo.github.io/post-images/1613467101852.png" alt="" loading="lazy"><br>
+今天我学习完了第九节课程，主要讲述了UnityGUI的一些搭建设计。</p>
+<h2 id="问题难点">问题/难点</h2>
+<p>在课程学习当中，我遇到了以下一些棘手的问题：</p>
+<ul>
+<li><strong>物体锚点的小蓝点凭空消失</strong></li>
+<li><strong>ScrollReft/Parent/Targetltem导入至新建的Parfats文件夹时由于事先导入错误，故删除修改无法重新导入</strong></li>
+</ul>
+<h2 id="问题解决方案">问题解决方案</h2>
+<h3 id="物体锚点的小蓝点凭空消失">物体锚点的小蓝点凭空消失</h3>
+<p>我咨询了一位大佬后，大佬耐心地指导了我。具体解决方法为：<strong>Scence面板中，按数字2键</strong>之后我又切回2D面板，蓝点出现。问题解决。🎯</p>
+<h3 id="无法重新导入解决方案">无法重新导入解决方案</h3>
+<p>我打算认怂，不敢把时间葬送在这个问题上。故采取了最笨最容易的方法：<strong>删了重做</strong>🎯</p>
+<h2 id="课程成品展示">课程成品展示</h2>
+<p><img src="https://smalloreo.github.io/post-images/1613467891703.png" alt="" loading="lazy"><br>
+<img src="https://smalloreo.github.io/post-images/1613467901324.png" alt="" loading="lazy"></p>
+<h2 id="需要修改bug之点">需要修改/BUG之点</h2>
+<ul>
+<li>英文命名待需检查，以免后期写脚本时出现错误或浪费时间</li>
+<li>不能自动排列图片一致间隔，需要手动调整（<strong>BUG</strong>）</li>
+<li>是否考虑图片框过小？</li>
+</ul>
+<p>本次的内容就到这里啦！希望等到1个月之后，我能跟着视频做出来一个像样的Unity作品！！！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[计算机科学导论第一章习题答案]]></title>
         <id>https://smalloreo.github.io/0PUj8oQnF/</id>
