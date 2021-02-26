@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smalloreo.github.io</id>
     <title>奥利奥</title>
-    <updated>2021-02-22T10:53:53.725Z</updated>
+    <updated>2021-02-26T13:09:52.036Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smalloreo.github.io"/>
     <link rel="self" href="https://smalloreo.github.io/atom.xml"/>
@@ -10,6 +10,61 @@
     <logo>https://smalloreo.github.io/images/avatar.png</logo>
     <icon>https://smalloreo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 奥利奥</rights>
+    <entry>
+        <title type="html"><![CDATA[UnityAPI第八讲笔记 | 让物体移动的脚本]]></title>
+        <id>https://smalloreo.github.io/UnityAPI04/</id>
+        <link href="https://smalloreo.github.io/UnityAPI04/">
+        </link>
+        <updated>2021-02-26T12:40:16.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="第一种方法">第一种方法</h2>
+<pre><code>void Update()
+{
+        this.transform.Translate(Vector3.forward * Time.deltaTime);
+}
+}
+</code></pre>
+<p>通过语句<code>this.transform.Translate(Vector3.forward * Time.deltaTime);</code>对物体Cube进行变换移动，</p>
+<p><a href="http://www.sikiedu.com/course/59/task/36834/show">视频课程</a>案例中使用了<s>可能较老</s>的方法语句<code>Cube.transform.Translate(Vector3.forward * Time.deltaTime);</code>但现在我进行测试发现此语句无法运行，会报错。经过搜索，得出应把<code>Cube.transfrom</code>改成<code>this.transfrom</code>，结果就可以了。</p>
+<h3 id="代码脚注">代码脚注</h3>
+<p>这段移动代码中，采用了<code>Vector3.forward*Time.deltaTime</code>的方法对速度进行一个缓和控制，以每秒为时间单位进行向前移动。<strong>这样可以得以避免速度太快或受玩家电脑硬件影响（帧率高低快慢，每秒1米速度）</strong></p>
+<h2 id="第二种移动方法">第二种移动方法</h2>
+<pre><code>void Update()
+{
+        this.transform.Translate(Vector3.forward / 50f);
+}
+}
+</code></pre>
+<h3 id="代码脚注-2">代码脚注</h3>
+<p>这个方法跟第一种不同点在于，它除以了50来确保速度平和。<strong>这是因为之前每秒不除以50时每秒运动50米，所以除50得到每秒运动1米。</strong></p>
+<h2 id="如何让物体移动速度变快一点">如何让物体移动速度变快一点？</h2>
+<p>在第一种方法上<code>Time.deltaTime</code>后面乘上相应的倍数**(实则上就是相应的每秒运动多少米)</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="第一种方法">第一种方法</h2>
+<pre><code>void Update()
+{
+        this.transform.Translate(Vector3.forward * Time.deltaTime);
+}
+}
+</code></pre>
+<p>通过语句<code>this.transform.Translate(Vector3.forward * Time.deltaTime);</code>对物体Cube进行变换移动，</p>
+<p><a href="http://www.sikiedu.com/course/59/task/36834/show">视频课程</a>案例中使用了<s>可能较老</s>的方法语句<code>Cube.transform.Translate(Vector3.forward * Time.deltaTime);</code>但现在我进行测试发现此语句无法运行，会报错。经过搜索，得出应把<code>Cube.transfrom</code>改成<code>this.transfrom</code>，结果就可以了。</p>
+<h3 id="代码脚注">代码脚注</h3>
+<p>这段移动代码中，采用了<code>Vector3.forward*Time.deltaTime</code>的方法对速度进行一个缓和控制，以每秒为时间单位进行向前移动。<strong>这样可以得以避免速度太快或受玩家电脑硬件影响（帧率高低快慢，每秒1米速度）</strong></p>
+<h2 id="第二种移动方法">第二种移动方法</h2>
+<pre><code>void Update()
+{
+        this.transform.Translate(Vector3.forward / 50f);
+}
+}
+</code></pre>
+<h3 id="代码脚注-2">代码脚注</h3>
+<p>这个方法跟第一种不同点在于，它除以了50来确保速度平和。<strong>这是因为之前每秒不除以50时每秒运动50米，所以除50得到每秒运动1米。</strong></p>
+<h2 id="如何让物体移动速度变快一点">如何让物体移动速度变快一点？</h2>
+<p>在第一种方法上<code>Time.deltaTime</code>后面乘上相应的倍数**(实则上就是相应的每秒运动多少米)</p>
+<!-- more -->
+<p>**即可。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[AR项目跟做 Le.9：完成UI设计]]></title>
         <id>https://smalloreo.github.io/m1cgfXnX0/</id>

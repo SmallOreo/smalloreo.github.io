@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>奥利奥</title>
-<link rel="shortcut icon" href="https://smalloreo.github.io/favicon.ico?v=1613991228409">
+<link rel="shortcut icon" href="https://smalloreo.github.io/favicon.ico?v=1614344987700">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://smalloreo.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="奥利奥 - Atom Feed" href="https://smalloreo.github.io/atom.xml">
@@ -18,7 +18,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://smalloreo.github.io">
-  <img class="avatar" src="https://smalloreo.github.io/images/avatar.png?v=1613991228409" alt="">
+  <img class="avatar" src="https://smalloreo.github.io/images/avatar.png?v=1614344987700" alt="">
   </a>
   <h1 class="site-title">
     奥利奥
@@ -70,6 +70,50 @@
 
     
         <div class="post-container">
+  
+    <article class="post">
+      <a href="https://smalloreo.github.io/UnityAPI04/">
+        <h2 class="post-title">UnityAPI第八讲笔记 | 让物体移动的脚本</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2021-02-26
+        </span>
+        <span>
+          2 min read
+        </span>
+        
+      </div>
+      
+        <a href="https://smalloreo.github.io/UnityAPI04/" class="post-feature-image" style="background-image: url('https://smalloreo.github.io/post-images/UnityAPI04.png')">
+        </a>
+      
+      <div class="post-abstract">
+        <h2 id="第一种方法">第一种方法</h2>
+<pre><code>void Update()
+{
+        this.transform.Translate(Vector3.forward * Time.deltaTime);
+}
+}
+</code></pre>
+<p>通过语句<code>this.transform.Translate(Vector3.forward * Time.deltaTime);</code>对物体Cube进行变换移动，</p>
+<p><a href="http://www.sikiedu.com/course/59/task/36834/show">视频课程</a>案例中使用了<s>可能较老</s>的方法语句<code>Cube.transform.Translate(Vector3.forward * Time.deltaTime);</code>但现在我进行测试发现此语句无法运行，会报错。经过搜索，得出应把<code>Cube.transfrom</code>改成<code>this.transfrom</code>，结果就可以了。</p>
+<h3 id="代码脚注">代码脚注</h3>
+<p>这段移动代码中，采用了<code>Vector3.forward*Time.deltaTime</code>的方法对速度进行一个缓和控制，以每秒为时间单位进行向前移动。<strong>这样可以得以避免速度太快或受玩家电脑硬件影响（帧率高低快慢，每秒1米速度）</strong></p>
+<h2 id="第二种移动方法">第二种移动方法</h2>
+<pre><code>void Update()
+{
+        this.transform.Translate(Vector3.forward / 50f);
+}
+}
+</code></pre>
+<h3 id="代码脚注-2">代码脚注</h3>
+<p>这个方法跟第一种不同点在于，它除以了50来确保速度平和。<strong>这是因为之前每秒不除以50时每秒运动50米，所以除50得到每秒运动1米。</strong></p>
+<h2 id="如何让物体移动速度变快一点">如何让物体移动速度变快一点？</h2>
+<p>在第一种方法上<code>Time.deltaTime</code>后面乘上相应的倍数**(实则上就是相应的每秒运动多少米)</p>
+
+      </div>
+    </article>
   
     <article class="post">
       <a href="https://smalloreo.github.io/m1cgfXnX0/">

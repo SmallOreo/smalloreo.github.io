@@ -2,24 +2,24 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AR项目跟做 Le.9：完成UI设计 | 奥利奥</title>
+<title>UnityAPI第八讲笔记 | 让物体移动的脚本 | 奥利奥</title>
 <link rel="shortcut icon" href="https://smalloreo.github.io/favicon.ico?v=1614344987700">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://smalloreo.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="AR项目跟做 Le.9：完成UI设计 | 奥利奥 - Atom Feed" href="https://smalloreo.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="UnityAPI第八讲笔记 | 让物体移动的脚本 | 奥利奥 - Atom Feed" href="https://smalloreo.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="本课概括
+    <meta name="description" content="第一种方法
+void Update()
+{
+        this.transform.Translate(Vector3.forward * Time.deltaTime);
+}
+}
 
-今天我学习完了第九节课程，主要讲述了UnityGUI的一些搭建设计。
-问题/难点
-在课程学习当中，我遇到了以下一些棘手的问题：
-
-物体锚点的小蓝点凭空消失
-ScrollReft/Parent/Targetltem导入至新建的Pa..." />
-    <meta name="keywords" content="AR项目跟做,编程" />
+通过语句this.transform.Transl..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -81,70 +81,63 @@ ScrollReft/Parent/Targetltem导入至新建的Pa..." />
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              AR项目跟做 Le.9：完成UI设计
+              UnityAPI第八讲笔记 | 让物体移动的脚本
             </h2>
             <div class="post-info">
               <span>
-                2021-02-16
+                2021-02-26
               </span>
               <span>
                 2 min read
               </span>
               
-                <a href="https://smalloreo.github.io/_cS1WiiJe/" class="post-tag">
-                  # AR项目跟做
-                </a>
-              
-                <a href="https://smalloreo.github.io/CcbwDHSd0/" class="post-tag">
-                  # 编程
-                </a>
-              
             </div>
             
-              <img class="post-feature-image" src="https://smalloreo.github.io/post-images/m1cgfXnX0.png" alt="">
+              <img class="post-feature-image" src="https://smalloreo.github.io/post-images/UnityAPI04.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="本课概括">本课概括</h2>
-<p><img src="https://smalloreo.github.io/post-images/1613467101852.png" alt="" loading="lazy"><br>
-今天我学习完了第九节课程，主要讲述了UnityGUI的一些搭建设计。</p>
-<h2 id="问题难点">问题/难点</h2>
-<p>在课程学习当中，我遇到了以下一些棘手的问题：</p>
-<ul>
-<li><strong>物体锚点的小蓝点凭空消失</strong></li>
-<li><strong>ScrollReft/Parent/Targetltem导入至新建的Parfats文件夹时由于事先导入错误，故删除修改无法重新导入</strong></li>
-</ul>
-<h2 id="问题解决方案">问题解决方案</h2>
-<h3 id="物体锚点的小蓝点凭空消失">物体锚点的小蓝点凭空消失</h3>
-<p>我咨询了一位大佬后，大佬耐心地指导了我。具体解决方法为：<strong>Scence面板中，按数字2键</strong>之后我又切回2D面板，蓝点出现。问题解决。🎯</p>
-<h3 id="无法重新导入解决方案">无法重新导入解决方案</h3>
-<p>我打算认怂，不敢把时间葬送在这个问题上。故采取了最笨最容易的方法：<strong>删了重做</strong>🎯</p>
-<h2 id="课程成品展示">课程成品展示</h2>
-<p><img src="https://smalloreo.github.io/post-images/1613467891703.png" alt="" loading="lazy"><br>
-<img src="https://smalloreo.github.io/post-images/1613467901324.png" alt="" loading="lazy"></p>
-<h2 id="需要修改bug之点">需要修改/BUG之点</h2>
-<ul>
-<li>英文命名待需检查，以免后期写脚本时出现错误或浪费时间</li>
-<li>不能自动排列图片一致间隔，需要手动调整（<strong>BUG</strong>）</li>
-<li>是否考虑图片框过小？</li>
-</ul>
-<p>本次的内容就到这里啦！希望等到1个月之后，我能跟着视频做出来一个像样的Unity作品！！！</p>
+                <h2 id="第一种方法">第一种方法</h2>
+<pre><code>void Update()
+{
+        this.transform.Translate(Vector3.forward * Time.deltaTime);
+}
+}
+</code></pre>
+<p>通过语句<code>this.transform.Translate(Vector3.forward * Time.deltaTime);</code>对物体Cube进行变换移动，</p>
+<p><a href="http://www.sikiedu.com/course/59/task/36834/show">视频课程</a>案例中使用了<s>可能较老</s>的方法语句<code>Cube.transform.Translate(Vector3.forward * Time.deltaTime);</code>但现在我进行测试发现此语句无法运行，会报错。经过搜索，得出应把<code>Cube.transfrom</code>改成<code>this.transfrom</code>，结果就可以了。</p>
+<h3 id="代码脚注">代码脚注</h3>
+<p>这段移动代码中，采用了<code>Vector3.forward*Time.deltaTime</code>的方法对速度进行一个缓和控制，以每秒为时间单位进行向前移动。<strong>这样可以得以避免速度太快或受玩家电脑硬件影响（帧率高低快慢，每秒1米速度）</strong></p>
+<h2 id="第二种移动方法">第二种移动方法</h2>
+<pre><code>void Update()
+{
+        this.transform.Translate(Vector3.forward / 50f);
+}
+}
+</code></pre>
+<h3 id="代码脚注-2">代码脚注</h3>
+<p>这个方法跟第一种不同点在于，它除以了50来确保速度平和。<strong>这是因为之前每秒不除以50时每秒运动50米，所以除50得到每秒运动1米。</strong></p>
+<h2 id="如何让物体移动速度变快一点">如何让物体移动速度变快一点？</h2>
+<p>在第一种方法上<code>Time.deltaTime</code>后面乘上相应的倍数**(实则上就是相应的每秒运动多少米)</p>
+<!-- more -->
+<p>**即可。</p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E6%9C%AC%E8%AF%BE%E6%A6%82%E6%8B%AC">本课概括</a></li>
-<li><a href="#%E9%97%AE%E9%A2%98%E9%9A%BE%E7%82%B9">问题/难点</a></li>
-<li><a href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">问题解决方案</a>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95">第一种方法</a>
 <ul>
-<li><a href="#%E7%89%A9%E4%BD%93%E9%94%9A%E7%82%B9%E7%9A%84%E5%B0%8F%E8%93%9D%E7%82%B9%E5%87%AD%E7%A9%BA%E6%B6%88%E5%A4%B1">物体锚点的小蓝点凭空消失</a></li>
-<li><a href="#%E6%97%A0%E6%B3%95%E9%87%8D%E6%96%B0%E5%AF%BC%E5%85%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">无法重新导入解决方案</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E8%84%9A%E6%B3%A8">代码脚注</a></li>
 </ul>
 </li>
-<li><a href="#%E8%AF%BE%E7%A8%8B%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA">课程成品展示</a></li>
-<li><a href="#%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9bug%E4%B9%8B%E7%82%B9">需要修改/BUG之点</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E7%A7%BB%E5%8A%A8%E6%96%B9%E6%B3%95">第二种移动方法</a>
+<ul>
+<li><a href="#%E4%BB%A3%E7%A0%81%E8%84%9A%E6%B3%A8-2">代码脚注</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A6%82%E4%BD%95%E8%AE%A9%E7%89%A9%E4%BD%93%E7%A7%BB%E5%8A%A8%E9%80%9F%E5%BA%A6%E5%8F%98%E5%BF%AB%E4%B8%80%E7%82%B9">如何让物体移动速度变快一点？</a></li>
 </ul>
 </li>
 </ul>
@@ -157,9 +150,9 @@ ScrollReft/Parent/Targetltem导入至新建的Pa..." />
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://smalloreo.github.io/0PUj8oQnF/">
+            <a href="https://smalloreo.github.io/m1cgfXnX0/">
               <h3 class="post-title">
-                计算机科学导论第一章习题答案
+                AR项目跟做 Le.9：完成UI设计
               </h3>
             </a>
           </div>
