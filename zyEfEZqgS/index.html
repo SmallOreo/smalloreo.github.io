@@ -2,24 +2,19 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AR项目跟做 Le.9：完成UI设计 | 奥利奥</title>
+<title>Unity第13讲笔记|游戏物体间消息的发送和接收 | 奥利奥</title>
 <link rel="shortcut icon" href="https://smalloreo.github.io/favicon.ico?v=1614515176633">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://smalloreo.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="AR项目跟做 Le.9：完成UI设计 | 奥利奥 - Atom Feed" href="https://smalloreo.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Unity第13讲笔记|游戏物体间消息的发送和接收 | 奥利奥 - Atom Feed" href="https://smalloreo.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="本课概括
-
-今天我学习完了第九节课程，主要讲述了UnityGUI的一些搭建设计。
-问题/难点
-在课程学习当中，我遇到了以下一些棘手的问题：
-
-物体锚点的小蓝点凭空消失
-ScrollReft/Parent/Targetltem导入至新建的Pa..." />
-    <meta name="keywords" content="AR项目跟做,编程" />
+    <meta name="description" content="采用方法简介
+BroadcastMessage：调用此游戏对象或其任何子项中的每个 MonoBehaviour 上名为 methodName 的方法。
+通过使用零参数，该接收方法可选择忽略 /parameter/。 如果选项设置为 Send..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -81,70 +76,69 @@ ScrollReft/Parent/Targetltem导入至新建的Pa..." />
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              AR项目跟做 Le.9：完成UI设计
+              Unity第13讲笔记|游戏物体间消息的发送和接收
             </h2>
             <div class="post-info">
               <span>
-                2021-02-16
+                2021-02-28
               </span>
               <span>
                 2 min read
               </span>
               
-                <a href="https://smalloreo.github.io/_cS1WiiJe/" class="post-tag">
-                  # AR项目跟做
-                </a>
-              
-                <a href="https://smalloreo.github.io/CcbwDHSd0/" class="post-tag">
-                  # 编程
-                </a>
-              
             </div>
-            
-              <img class="post-feature-image" src="https://smalloreo.github.io/post-images/m1cgfXnX0.png" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="本课概括">本课概括</h2>
-<p><img src="https://smalloreo.github.io/post-images/1613467101852.png" alt="" loading="lazy"><br>
-今天我学习完了第九节课程，主要讲述了UnityGUI的一些搭建设计。</p>
-<h2 id="问题难点">问题/难点</h2>
-<p>在课程学习当中，我遇到了以下一些棘手的问题：</p>
-<ul>
-<li><strong>物体锚点的小蓝点凭空消失</strong></li>
-<li><strong>ScrollReft/Parent/Targetltem导入至新建的Parfats文件夹时由于事先导入错误，故删除修改无法重新导入</strong></li>
-</ul>
-<h2 id="问题解决方案">问题解决方案</h2>
-<h3 id="物体锚点的小蓝点凭空消失">物体锚点的小蓝点凭空消失</h3>
-<p>我咨询了一位大佬后，大佬耐心地指导了我。具体解决方法为：<strong>Scence面板中，按数字2键</strong>之后我又切回2D面板，蓝点出现。问题解决。🎯</p>
-<h3 id="无法重新导入解决方案">无法重新导入解决方案</h3>
-<p>我打算认怂，不敢把时间葬送在这个问题上。故采取了最笨最容易的方法：<strong>删了重做</strong>🎯</p>
-<h2 id="课程成品展示">课程成品展示</h2>
-<p><img src="https://smalloreo.github.io/post-images/1613467891703.png" alt="" loading="lazy"><br>
-<img src="https://smalloreo.github.io/post-images/1613467901324.png" alt="" loading="lazy"></p>
-<h2 id="需要修改bug之点">需要修改/BUG之点</h2>
-<ul>
-<li>英文命名待需检查，以免后期写脚本时出现错误或浪费时间</li>
-<li>不能自动排列图片一致间隔，需要手动调整（<strong>BUG</strong>）</li>
-<li>是否考虑图片框过小？</li>
-</ul>
-<p>本次的内容就到这里啦！希望等到1个月之后，我能跟着视频做出来一个像样的Unity作品！！！</p>
+                <h2 id="采用方法简介">采用方法简介</h2>
+<p><strong><code>BroadcastMessage</code>：调用此游戏对象或其任何子项中的每个 <code>MonoBehaviour</code> 上名为 <code>methodName</code> 的方法。</strong></p>
+<p><strong>通过使用零参数，该接收方法可选择忽略 /parameter/。 如果选项设置为 <code>SendMessageOptions.RequireReceiver</code>，则在任何组件均未拾取此消息时输出错误。</strong></p>
+<h3 id="unity手册案例程序">Unity手册案例程序</h3>
+<pre><code>using UnityEngine;
+public class Example : MonoBehaviour
+{
+    void Start()
+    {
+        /// Calls the function ApplyDamage with a value of 5
+        /// // Every script attached to the game object and all its children
+        // that has a ApplyDamage function will be called.
+        gameObject.BroadcastMessage(&quot;ApplyDamage&quot;, 5.0);
+    }
+}
+
+public class Example2 : MonoBehaviour
+{
+    public void ApplyDamage(float damage)
+    {
+        print(damage);
+    }
+}
+</code></pre>
+<h2 id="脚本程序设计">脚本程序设计</h2>
+<p>先创建两个脚本，在A脚本创建个对象<code>public GameObject start;</code></p>
+<p>之后我们在A脚本里的start函数内调用<code>BroadcastMessage</code>方法：</p>
+<pre><code class="language-start.BroadcastMessage(&quot;表白&quot;,"></code></pre>
+<p>为了防止报错，我们在null后面加了个DontRequireReceiver。代表对象可有可无。引号内是事件广播的名称。可不是输出字符串！</p>
+<p>之后在Unity里我们需要挂载物体，我选择的是Cube。</p>
+<p>在B脚本里，我们就可以调用这个函数了。<br>
+void 表白 ()<br>
+{<br>
+Debug.Log(this.gameObject + &quot;正在被表白&quot;);<br>
+}</p>
+<p>然后再运行，我们就会发现运行成功了。广播成功。</p>
+<p>之后在B脚本里，我们可以</p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E6%9C%AC%E8%AF%BE%E6%A6%82%E6%8B%AC">本课概括</a></li>
-<li><a href="#%E9%97%AE%E9%A2%98%E9%9A%BE%E7%82%B9">问题/难点</a></li>
-<li><a href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">问题解决方案</a>
+<li><a href="#%E9%87%87%E7%94%A8%E6%96%B9%E6%B3%95%E7%AE%80%E4%BB%8B">采用方法简介</a>
 <ul>
-<li><a href="#%E7%89%A9%E4%BD%93%E9%94%9A%E7%82%B9%E7%9A%84%E5%B0%8F%E8%93%9D%E7%82%B9%E5%87%AD%E7%A9%BA%E6%B6%88%E5%A4%B1">物体锚点的小蓝点凭空消失</a></li>
-<li><a href="#%E6%97%A0%E6%B3%95%E9%87%8D%E6%96%B0%E5%AF%BC%E5%85%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">无法重新导入解决方案</a></li>
+<li><a href="#unity%E6%89%8B%E5%86%8C%E6%A1%88%E4%BE%8B%E7%A8%8B%E5%BA%8F">Unity手册案例程序</a></li>
 </ul>
 </li>
-<li><a href="#%E8%AF%BE%E7%A8%8B%E6%88%90%E5%93%81%E5%B1%95%E7%A4%BA">课程成品展示</a></li>
-<li><a href="#%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9bug%E4%B9%8B%E7%82%B9">需要修改/BUG之点</a></li>
+<li><a href="#%E8%84%9A%E6%9C%AC%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1">脚本程序设计</a></li>
 </ul>
 </li>
 </ul>
@@ -157,9 +151,9 @@ ScrollReft/Parent/Targetltem导入至新建的Pa..." />
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://smalloreo.github.io/0PUj8oQnF/">
+            <a href="https://smalloreo.github.io/UnityAPI04/">
               <h3 class="post-title">
-                计算机科学导论第一章习题答案
+                UnityAPI第八讲笔记 | 让物体移动的脚本
               </h3>
             </a>
           </div>
